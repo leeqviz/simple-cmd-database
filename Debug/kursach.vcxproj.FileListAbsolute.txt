@@ -1,2 +1,0 @@
-C:\Users\Leeqviz\Desktop\kursa4_cpp\kursach\Debug\kursach.exe
-C:\Users\Leeqviz\Desktop\kursa4_cpp\kursach\Debug\kursach.pdb
