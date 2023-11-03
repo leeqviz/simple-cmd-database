@@ -1,5 +1,5 @@
 #pragma once
-#include "global.h"
+#include "global.hpp"
 #include <iostream>
 #include <conio.h>
 
