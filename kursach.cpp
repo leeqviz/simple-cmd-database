@@ -1,7 +1,7 @@
 // kursach.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include "menu.h"
+#include "menu.hpp"
 #include <Windows.h>
 
 int main(int argc, char** argv)
@@ -9,7 +9,7 @@ int main(int argc, char** argv)
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     system("cls");
-    cout << " Êóðñîâàÿ ðàáîòà: Ñåìåéíûå ïàðû" << endl << " Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ...";
+    cout << " ÃŠÃ³Ã°Ã±Ã®Ã¢Ã Ã¿ Ã°Ã Ã¡Ã®Ã²Ã : Ã‘Ã¥Ã¬Ã¥Ã©Ã­Ã»Ã¥ Ã¯Ã Ã°Ã»" << endl << " ÃÃ Ã¦Ã¬Ã¨Ã²Ã¥ Ã«Ã¾Ã¡Ã³Ã¾ ÃªÃ«Ã Ã¢Ã¨Ã¸Ã³ Ã¤Ã«Ã¿ Ã¯Ã°Ã®Ã¤Ã®Ã«Ã¦Ã¥Ã­Ã¨Ã¿...";
     (void)_getch();
     menu();
     system("cls");
