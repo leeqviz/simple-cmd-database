@@ -1,7 +1,7 @@
 #pragma once
-#include "global.h"
-#include "handler.h"
-#include "file.h"
+#include "global.hpp"
+#include "handler.hpp"
+#include "file.hpp"
 #include <iostream>
 #include <conio.h>
 #include <cstdio>
