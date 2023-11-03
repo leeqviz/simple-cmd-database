@@ -1,4 +1,4 @@
-#include "file.h"
+#include "file.hpp"
 
 void save(Person* person, int currentSize)
 {
@@ -24,7 +24,6 @@ void save(Person* person, int currentSize)
 	for (size_t i = 0; i < pv.size(); i++)
 		fout.write((char*)&pv.at(i), sizeof(Person));
 	fout.close();
-	cout << "Данные сохранены...";
 }
 
 vector<Person> load(Person* person, int currentSize, bool flag)
@@ -58,6 +57,5 @@ vector<Person> load(Person* person, int currentSize, bool flag)
 		pv.push_back(p);
 	}
 	fin.close();
-	cout << "Данные загружены...";
 	return pv;
 }
