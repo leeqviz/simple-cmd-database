@@ -1,4 +1,4 @@
-#include "handler.h"
+#include "handler.hpp"
 
 int counter = 0;
 
@@ -11,11 +11,11 @@ void insertRecords(Person* person, int currentSize)
 {
 	for (counter; counter < currentSize; counter++)
 	{
-		cout << " Çàïèñü íîìåð: " << counter + 1 << endl;
+		cout << " Ã‡Ã Ã¯Ã¨Ã±Ã¼ Ã­Ã®Ã¬Ã¥Ã°: " << counter + 1 << endl;
 		while (1) 
 		{
 			fflush(stdin);
-			cout << " Èìÿ (óíèêàëüíîå çíà÷åíèå): ";
+			cout << " ÃˆÃ¬Ã¿ (Ã³Ã­Ã¨ÃªÃ Ã«Ã¼Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥): ";
 			cin.getline(person[counter].name, 50);
 			char buff[50];
 			bool flag = false;
@@ -32,11 +32,11 @@ void insertRecords(Person* person, int currentSize)
 		}
 		while (1)
 		{
-			cout << " Ïîë (ì/æ): "; 
+			cout << " ÃÃ®Ã« (Ã¬/Ã¦): "; 
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 10);
-			if (strcmp(buf, "ì") == 0 || strcmp(buf, "æ") == 0)
+			if (strcmp(buf, "Ã¬") == 0 || strcmp(buf, "Ã¦") == 0)
 			{
 				strcpy_s(person[counter].sex, buf);
 				break;
@@ -44,7 +44,7 @@ void insertRecords(Person* person, int currentSize)
 		}
 		while (1)
 		{
-			cout << " Âîçðàñò (öåëî÷èñëåííîå çíà÷åíèå): ";
+			cout << " Ã‚Ã®Ã§Ã°Ã Ã±Ã² (Ã¶Ã¥Ã«Ã®Ã·Ã¨Ã±Ã«Ã¥Ã­Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥): ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -56,12 +56,12 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		while (1)
 		{
-			cout << " Ðîñò (÷èñëî ñ ïëàâàþùåé òî÷êîé): ";
+			cout << " ÃÃ®Ã±Ã² (Ã·Ã¨Ã±Ã«Ã® Ã± Ã¯Ã«Ã Ã¢Ã Ã¾Ã¹Ã¥Ã© Ã²Ã®Ã·ÃªÃ®Ã©): ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -73,12 +73,12 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		while (1)
 		{
-			cout << " Âåñ (÷èñëî ñ ïëàâàþùåé òî÷êîé): ";
+			cout << " Ã‚Ã¥Ã± (Ã·Ã¨Ã±Ã«Ã® Ã± Ã¯Ã«Ã Ã¢Ã Ã¾Ã¹Ã¥Ã© Ã²Ã®Ã·ÃªÃ®Ã©): ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -90,12 +90,12 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		while (1)
 		{
-			cout << " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé âîçðàñò ïàðí¸ðà: ";
+			cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -107,12 +107,12 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		while (1)
 		{
-			cout << " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé âîçðàñò ïàðí¸ðà: ";
+			cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -124,12 +124,12 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		while (1)
 		{
-			cout << " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé ðîñò ïàðí¸ðà: ";
+			cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã°Ã®Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -141,12 +141,12 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		while (1)
 		{
-			cout << " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé ðîñò ïàðí¸ðà: ";
+			cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã°Ã®Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -158,12 +158,12 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		while (1)
 		{
-			cout << " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé âåñ ïàðí¸ðà: ";
+			cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã¥Ã± Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -175,12 +175,12 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		while (1)
 		{
-			cout << " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé âåñ ïàðí¸ðà: ";
+			cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã¥Ã± Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 			char buf[128];
 			fflush(stdin);
 			cin.getline(buf, 128);
@@ -192,7 +192,7 @@ void insertRecords(Person* person, int currentSize)
 			}
 			else
 			{
-				cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+				cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 			}
 		}
 		cout << " ---------- " << endl;
@@ -203,19 +203,19 @@ void selectRecords(Person* person)
 {
 	for (int i = 0; i < counter; i++)
 	{
-		cout << " Çàïèñü íîìåð: " << i + 1 << endl
-			<< " Èìÿ: " << person[i].name << endl
-			<< " Ïîë: " << person[i].sex << endl
-			<< " Âîçðàñò: " << person[i].age << endl
-			<< " Ðîñò: " << person[i].height << endl
-			<< " Âåñ: " << person[i].weight << endl
+		cout << " Ã‡Ã Ã¯Ã¨Ã±Ã¼ Ã­Ã®Ã¬Ã¥Ã°: " << i + 1 << endl
+			<< " ÃˆÃ¬Ã¿: " << person[i].name << endl
+			<< " ÃÃ®Ã«: " << person[i].sex << endl
+			<< " Ã‚Ã®Ã§Ã°Ã Ã±Ã²: " << person[i].age << endl
+			<< " ÃÃ®Ã±Ã²: " << person[i].height << endl
+			<< " Ã‚Ã¥Ã±: " << person[i].weight << endl
 
-			<< " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé âîçðàñò ïàðí¸ðà: " << person[i].requirment.maxAge << endl
-			<< " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé âîçðàñò ïàðí¸ðà: " << person[i].requirment.minAge << endl
-			<< " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé ðîñò ïàðí¸ðà: " << person[i].requirment.maxHeight << endl
-			<< " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé ðîñò ïàðí¸ðà: " << person[i].requirment.minHeight << endl
-			<< " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé âåñ ïàðí¸ðà: " << person[i].requirment.maxWeight << endl
-			<< " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé âåñ ïàðí¸ðà: " << person[i].requirment.minWeight << endl
+			<< " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : " << person[i].requirment.maxAge << endl
+			<< " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : " << person[i].requirment.minAge << endl
+			<< " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã°Ã®Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : " << person[i].requirment.maxHeight << endl
+			<< " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã°Ã®Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : " << person[i].requirment.minHeight << endl
+			<< " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã¥Ã± Ã¯Ã Ã°Ã­Â¸Ã°Ã : " << person[i].requirment.maxWeight << endl
+			<< " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã¥Ã± Ã¯Ã Ã°Ã­Â¸Ã°Ã : " << person[i].requirment.minWeight << endl
 			<< " ---------- " << endl;
 	}
 }
@@ -245,18 +245,18 @@ void updateRecord(Person person)
 	while (1)
 	{
 		fflush(stdin);
-		cout << " Èìÿ (óíèêàëüíîå çíà÷åíèå): ";
+		cout << " ÃˆÃ¬Ã¿ (Ã³Ã­Ã¨ÃªÃ Ã«Ã¼Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥): ";
 		cin.getline(person.name, 50);
 		break;
 
 	}
 	while (1)
 	{
-		cout << " Ïîë (ì/æ): ";
+		cout << " ÃÃ®Ã« (Ã¬/Ã¦): ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 10);
-		if (strcmp(buf, "ì") == 0 || strcmp(buf, "æ") == 0)
+		if (strcmp(buf, "Ã¬") == 0 || strcmp(buf, "Ã¦") == 0)
 		{
 			strcpy_s(person.sex, buf);
 			break;
@@ -265,7 +265,7 @@ void updateRecord(Person person)
 	}
 	while (1)
 	{
-		cout << " Âîçðàñò (öåëî÷èñëåííîå çíà÷åíèå): ";
+		cout << " Ã‚Ã®Ã§Ã°Ã Ã±Ã² (Ã¶Ã¥Ã«Ã®Ã·Ã¨Ã±Ã«Ã¥Ã­Ã­Ã®Ã¥ Ã§Ã­Ã Ã·Ã¥Ã­Ã¨Ã¥): ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -277,12 +277,12 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
 	while (1)
 	{
-		cout << " Ðîñò (÷èñëî ñ ïëàâàþùåé òî÷êîé): ";
+		cout << " ÃÃ®Ã±Ã² (Ã·Ã¨Ã±Ã«Ã® Ã± Ã¯Ã«Ã Ã¢Ã Ã¾Ã¹Ã¥Ã© Ã²Ã®Ã·ÃªÃ®Ã©): ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -294,12 +294,12 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
 	while (1)
 	{
-		cout << " Âåñ (÷èñëî ñ ïëàâàþùåé òî÷êîé): ";
+		cout << " Ã‚Ã¥Ã± (Ã·Ã¨Ã±Ã«Ã® Ã± Ã¯Ã«Ã Ã¢Ã Ã¾Ã¹Ã¥Ã© Ã²Ã®Ã·ÃªÃ®Ã©): ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -311,12 +311,12 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
 	while (1)
 	{
-		cout << " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé âîçðàñò ïàðí¸ðà: ";
+		cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -328,12 +328,12 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
 	while (1)
 	{
-		cout << " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé âîçðàñò ïàðí¸ðà: ";
+		cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã®Ã§Ã°Ã Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -345,12 +345,12 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
 	while (1)
 	{
-		cout << " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé ðîñò ïàðí¸ðà: ";
+		cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã°Ã®Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -362,12 +362,12 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
 	while (1)
 	{
-		cout << " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé ðîñò ïàðí¸ðà: ";
+		cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã°Ã®Ã±Ã² Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -379,12 +379,12 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
 	while (1)
 	{
-		cout << " Ïðåäïî÷òèòåëüíûé ìàêñèìàëüíûé âåñ ïàðí¸ðà: ";
+		cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã ÃªÃ±Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã¥Ã± Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -396,12 +396,12 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
 	while (1)
 	{
-		cout << " Ïðåäïî÷òèòåëüíûé ìèíèìàëüíûé âåñ ïàðí¸ðà: ";
+		cout << " ÃÃ°Ã¥Ã¤Ã¯Ã®Ã·Ã²Ã¨Ã²Ã¥Ã«Ã¼Ã­Ã»Ã© Ã¬Ã¨Ã­Ã¨Ã¬Ã Ã«Ã¼Ã­Ã»Ã© Ã¢Ã¥Ã± Ã¯Ã Ã°Ã­Â¸Ã°Ã : ";
 		char buf[128];
 		fflush(stdin);
 		cin.getline(buf, 128);
@@ -413,10 +413,10 @@ void updateRecord(Person person)
 		}
 		else
 		{
-			cout << " Íåîáõîäèìî ââåñòè ÷èñëî!" << endl;
+			cout << " ÃÃ¥Ã®Ã¡ÃµÃ®Ã¤Ã¨Ã¬Ã® Ã¢Ã¢Ã¥Ã±Ã²Ã¨ Ã·Ã¨Ã±Ã«Ã®!" << endl;
 		}
 	}
-	cout << " Íàæìèòå ëþáóþ êëàâèøó äëÿ ïðîäîëæåíèÿ..." << endl;
+	cout << " ÃÃ Ã¦Ã¬Ã¨Ã²Ã¥ Ã«Ã¾Ã¡Ã³Ã¾ ÃªÃ«Ã Ã¢Ã¨Ã¸Ã³ Ã¤Ã«Ã¿ Ã¯Ã°Ã®Ã¤Ã®Ã«Ã¦Ã¥Ã­Ã¨Ã¿..." << endl;
 }
 
 void swap(Person* pLeft, Person* pRight)
@@ -495,7 +495,7 @@ void sorting(Person* person, int currentSize, int field)
 			if (strcmp(bLeft, bRight) > 0) swap(person[i], person[j]);
 		}
 	}
-	cout << "Îòñîðòèðîâàíî..." << endl;
+	cout << "ÃŽÃ²Ã±Ã®Ã°Ã²Ã¨Ã°Ã®Ã¢Ã Ã­Ã®..." << endl;
 }
 
 void search(Person* person, int currentSize, int field, char text[128])
@@ -519,16 +519,16 @@ void search(Person* person, int currentSize, int field, char text[128])
 		else left = c + 1;
 
 		if (yes) {
-			cout << " Çàïèñü ïîä íîìåðîì " << c + 1 << " íàéäåíà!" << endl
+			cout << " Ã‡Ã Ã¯Ã¨Ã±Ã¼ Ã¯Ã®Ã¤ Ã­Ã®Ã¬Ã¥Ã°Ã®Ã¬ " << c + 1 << " Ã­Ã Ã©Ã¤Ã¥Ã­Ã !" << endl
 				<< " ______________________________" << endl
-				<< " Èìÿ: " << person[c].name << endl
-				<< " Ïîë: " << person[c].sex << endl
-				<< " Âîçðàñò: " << person[c].age << endl
-				<< " Ðîñò: " << person[c].height << endl
-				<< " Âåñ: " << person[c].weight << endl
+				<< " ÃˆÃ¬Ã¿: " << person[c].name << endl
+				<< " ÃÃ®Ã«: " << person[c].sex << endl
+				<< " Ã‚Ã®Ã§Ã°Ã Ã±Ã²: " << person[c].age << endl
+				<< " ÃÃ®Ã±Ã²: " << person[c].height << endl
+				<< " Ã‚Ã¥Ã±: " << person[c].weight << endl
 				<< " ______________________________" << endl;
 		}
-		else cout << " Çàïèñü íå íàéäåíà!" << endl;
+		else cout << " Ã‡Ã Ã¯Ã¨Ã±Ã¼ Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­Ã !" << endl;
 	}
 }
 
@@ -545,8 +545,8 @@ void task(Person* person, Pair* pairs)
 				&& (person[j].height >= person[i].requirment.minHeight && person[j].height <= person[i].requirment.maxHeight)
 				&& (person[j].weight >= person[i].requirment.minWeight && person[j].weight <= person[i].requirment.maxWeight))
 			{
-				if ((strcmp(person[j].sex, "ì") == 0 && strcmp(person[i].sex, "æ") == 0)
-					|| (strcmp(person[j].sex, "æ") == 0 && strcmp(person[i].sex, "ì") == 0))
+				if ((strcmp(person[j].sex, "Ã¬") == 0 && strcmp(person[i].sex, "Ã¦") == 0)
+					|| (strcmp(person[j].sex, "Ã¦") == 0 && strcmp(person[i].sex, "Ã¬") == 0))
 				{
 					bool flag = false;
 					for (int c = 0; c < count; c++) {
@@ -567,12 +567,12 @@ void task(Person* person, Pair* pairs)
 						Pair* t = pairs;
 						if (pairs = (Pair*)realloc(pairs, count * sizeof(Pair)))
 						{
-							pairs[count - 1].husband = strcmp(person[j].sex, "ì") == 0 ? person[j] : person[i];
-							pairs[count - 1].wife = strcmp(person[j].sex, "æ") == 0 ? person[j] : person[i];
+							pairs[count - 1].husband = strcmp(person[j].sex, "Ã¬") == 0 ? person[j] : person[i];
+							pairs[count - 1].wife = strcmp(person[j].sex, "Ã¦") == 0 ? person[j] : person[i];
 						}
 						else
 						{
-							cout << "Âîçíèêëà îøèáêà âûäåëåíèÿ ïàìÿòè!" << endl;
+							cout << "Ã‚Ã®Ã§Ã­Ã¨ÃªÃ«Ã  Ã®Ã¸Ã¨Ã¡ÃªÃ  Ã¢Ã»Ã¤Ã¥Ã«Ã¥Ã­Ã¨Ã¿ Ã¯Ã Ã¬Ã¿Ã²Ã¨!" << endl;
 							return;
 						}
 						break;
@@ -581,7 +581,7 @@ void task(Person* person, Pair* pairs)
 			}
 		}
 	}
-	cout << "Ïàðû:" << endl;
+	cout << "ÃÃ Ã°Ã»:" << endl;
 	for (int k = 0; k < count; k++) 
 	{
 		cout << "----------" << endl
