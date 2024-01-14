@@ -1,4 +1,4 @@
-// kursach.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// program.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include "menu.hpp"
